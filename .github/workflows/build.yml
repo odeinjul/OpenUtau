@@ -128,7 +128,8 @@ jobs:
           name: OpenUtau-${{ matrix.arch.name }}.dmg
           path: OpenUtau-${{ matrix.arch.name }}.dmg
         if: ${{ !inputs.release && matrix.arch.os == 'osx' }}
-
+      - name: Debug
+        run: echo ${{ matrix.arch.name }}
       # Appcast
       - name: Appcast Windows
         shell: cmd
